@@ -1,1 +1,1 @@
-# Chess-games-analyzer-using-stockfish-
+# Chess-analytics-using-stockfish-
