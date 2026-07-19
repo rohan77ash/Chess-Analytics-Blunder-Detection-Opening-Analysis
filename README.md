@@ -40,7 +40,23 @@ would need many more games of data to say anything confident about my own
 time-pressure tendencies. This is a good example of why small personal
 datasets need to be read cautiously rather than over-interpreted.
 
-## Why this is more than a stats dashboard
+## Opening win rate
+
+| ECO | Games | Wins | Losses | Draws | Win rate |
+|---|---|---|---|---|---|
+| D00 | 4 | 1 | 2 | 1 | 25.0% |
+| C40 | 2 | 1 | 1 | 0 | 50.0% |
+| A00, B00, A06, C44, C47, C42, C25, A40, D02, B18 | 1 each | 0 | 1 | 0 | 0.0% |
+
+**Honest takeaway:** with only 16 games spread across 12 different openings,
+most openings only have a single data point -- not enough to draw real
+conclusions about which openings I actually perform best with. D00 (Queen's
+Pawn) is the only opening I've played more than twice, and even that's just
+4 games. This would need a much larger game history to say anything
+statistically meaningful -- another case where a small personal dataset
+needs to be read cautiously rather than over-interpreted.
+
+## Why this is more than basic stats 
 
 Most "personal analytics" projects just aggregate counts (wins, losses,
 average rating). This pipeline does real move-level analysis: every move
