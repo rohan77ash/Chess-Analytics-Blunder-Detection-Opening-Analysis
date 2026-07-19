@@ -21,6 +21,25 @@ These numbers come directly from `sample_output/games.csv` and
 `sample_output/move_evaluations.csv` -- real output from the pipeline below,
 not fabricated data.
 
+## Real finding: time pressure analysis
+
+Checking blunder rate against clock time remaining (from my own 461 analyzed moves):
+
+| Time remaining | Moves | Blunders | Blunder rate |
+|---|---|---|---|
+| Under 30s | 20 | 0 | 0.0% |
+| 30-60s | 23 | 3 | 13.0% |
+| 1-2 min | 18 | 5 | 27.8% |
+| Over 2 min | 400 | 49 | 12.2% |
+
+**Honest takeaway:** no clean "more time pressure = more blunders" pattern
+emerged -- the worst bucket was actually 1-2 minutes remaining, not the more
+extreme under-30-seconds bucket. Sample sizes in the low-time buckets are
+small (18-23 moves), so this isn't a statistically strong conclusion -- it
+would need many more games of data to say anything confident about my own
+time-pressure tendencies. This is a good example of why small personal
+datasets need to be read cautiously rather than over-interpreted.
+
 ## Why this is more than a stats dashboard
 
 Most "personal analytics" projects just aggregate counts (wins, losses,
@@ -104,6 +123,8 @@ ready to load into Snowflake using the schema in `schema.sql`.
   keeps setup simple).
 - The engine runs locally and sequentially -- for large histories, this
   could be parallelized across multiple engine processes.
+- Time-pressure sample sizes are small for a 16-game dataset -- more games
+  would be needed for statistically confident conclusions.
 
 ## Tech stack
 
