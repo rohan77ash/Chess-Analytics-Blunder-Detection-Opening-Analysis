@@ -1,4 +1,4 @@
-# Chess Analytics: Blunder Detection & Opening Analysis Pipeline
+# Chess Analytics: Blunder Detection, Opening moves and moves under time pressure analysis 
 
 An end-to-end data pipeline that pulls my own chess.com game history, replays
 every move through the Stockfish chess engine to measure move quality, and
